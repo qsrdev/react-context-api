@@ -1,13 +1,13 @@
 // src/components/PostList.jsx
-import React, { useContext } from "react";
-import PostContext from "../context/PostContext";
+import { useContext } from "react";
+import PostContext from "../context/Context";
 import { Link } from "react-router-dom";
 
 export default function PostList() {
   const { posts } = useContext(PostContext);
 
   return (
-    <div className="row">
+    <div className="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4">
       {posts.map((post) => (
         <div key={post.id} className="col">
           <div className="card text-bg-dark mb-3">
